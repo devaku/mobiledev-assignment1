@@ -8,59 +8,44 @@ import {
 	TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import '../assets/css/global.css';
+import '../../assets/css/global.css';
 
 export default function App() {
 	// Because React Native does not play
 	// with dynamic file paths apparently >_>
+
+	const picture_url = '../../assets/images/food';
+
 	const food_pictures = [
 		{
-			file_path: require('../assets/images/food/chickfilletsandwich.jpg'),
+			file_path: require(`${picture_url}/chickfilletsandwich.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/christmaspuddingflapjack.jpg'),
+			file_path: require(`${picture_url}/christmaspuddingflapjack.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/crispyeggplant.jpg'),
+			file_path: require(`${picture_url}/crispyeggplant.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/ecclescake.jpg'),
+			file_path: require(`${picture_url}/ecclescake.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/fishfofos.jpg'),
+			file_path: require(`${picture_url}/fishfofos.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/hotchocolatefudge.jpg'),
+			file_path: require(`${picture_url}/hotchocolatefudge.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/krispykreme.jpg'),
+			file_path: require(`${picture_url}/krispykreme.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/lambtzatzikiburgers.jpg'),
+			file_path: require(`${picture_url}/lambtzatzikiburgers.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/lasagnasandwiches.jpg'),
+			file_path: require(`${picture_url}/lasagnasandwiches.jpg`),
 		},
 		{
-			file_path: require('../assets/images/food/timbits.jpg'),
-		},
-		{
-			file_path: require('../assets/images/food/lambtzatzikiburgers.jpg'),
-		},
-		{
-			file_path: require('../assets/images/food/lasagnasandwiches.jpg'),
-		},
-		{
-			file_path: require('../assets/images/food/timbits.jpg'),
-		},
-		{
-			file_path: require('../assets/images/food/lambtzatzikiburgers.jpg'),
-		},
-		{
-			file_path: require('../assets/images/food/lasagnasandwiches.jpg'),
-		},
-		{
-			file_path: require('../assets/images/food/timbits.jpg'),
+			file_path: require(`${picture_url}/timbits.jpg`),
 		},
 	];
 	let key = 0;
@@ -74,7 +59,7 @@ export default function App() {
 				style={{ flex: 1, marginTop: StatusBar.currentHeight || 0 }}
 			>
 				{/* Profile Area */}
-				<View className="mt-3 flex flex-row justify-evenly items-center">
+				<View className="flex flex-row justify-evenly items-center">
 					{/* Image */}
 					<View className="">
 						<Image
@@ -83,7 +68,7 @@ export default function App() {
 								width: 100,
 								height: 100,
 							}}
-							source={require('../assets/images/icon.jpeg')}
+							source={require('../../assets/images/icon.jpeg')}
 						></Image>
 					</View>
 					{/* Text */}
