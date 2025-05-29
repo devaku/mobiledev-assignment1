@@ -59,44 +59,44 @@ export default function App() {
 				style={{ flex: 1, marginTop: StatusBar.currentHeight || 0 }}
 			>
 				{/* Profile Area */}
-				<View className="flex flex-row justify-evenly items-center">
+				<View className="flex flex-row">
 					{/* Image */}
-					<View className="">
+					<View className="mr-auto ml-2 border-2 rounded-full">
 						<Image
-							className="rounded-full"
+							className="rounded-full m-1"
 							style={{
 								width: 100,
-								height: 100,
+								height: 100
 							}}
 							source={require('../../assets/images/icon.jpeg')}
 						></Image>
 					</View>
 					{/* Text */}
-					<View className="flex flex-row gap-2">
+					<View className="flex flex-row gap-8 items-center mr-auto">
 						<View>
-							<Text className="text-center">69</Text>
-							<Text className="font-bold">Posts</Text>
+							<Text className="text-center font-bold">69</Text>
+							<Text>Posts</Text>
 						</View>
 						<View>
-							<Text className="text-center">420</Text>
-							<Text className="font-bold">Members</Text>
+							<Text className="text-center font-bold">420</Text>
+							<Text>Members</Text>
 						</View>
 						<View>
-							<Text className="text-center">-1</Text>
-							<Text className="font-bold">Admins</Text>
+							<Text className="text-center font-bold">-1</Text>
+							<Text>Admins</Text>
 						</View>
 					</View>
 				</View>
 
 				{/* Text */}
-				<View className="ml-5 my-2">
+				<View className="ml-5 mt-4">
 					<Text>Food Everyday 🍔🍴</Text>
 					<Text>Mouth watering goodness!</Text>
 				</View>
 
 				{/* Member Button */}
 				<TouchableOpacity
-					className="flex flex-row justify-center border border-slate-400 p-1 m-4"
+					className="flex flex-row justify-center border border-slate-400 p-1 m-4 rounded"
 					onPress={handleClick}
 				>
 					<Text className="font-semibold">Click Me</Text>
@@ -106,13 +106,16 @@ export default function App() {
 				<FlatList
 					data={food_pictures}
 					numColumns={3}
+					contentContainerStyle={{gap: 3}}
+					columnWrapperStyle={{gap: 3}}
 					renderItem={({ item }) => (
 						<Image
 							key={key++}
 							className=""
 							style={{
-								width: 125,
-								height: 125,
+								flex: 1 / 3,
+								height: "auto",
+								aspectRatio: 1,
 							}}
 							source={item.file_path}
 						></Image>
