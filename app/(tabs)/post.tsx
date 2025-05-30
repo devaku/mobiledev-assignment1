@@ -12,19 +12,20 @@ export default function Post() {
 	return (
 		<SafeAreaProvider>
 			<SafeAreaView
-				style={{ flex: 1, marginTop: StatusBar.currentHeight || 0 }}
+				style={{ flex: 1, marginTop: StatusBar.currentHeight || 0}}
+				className=""
 			>
 				<View className='flex flex-row'>
 					<Image className='w-10 h-10 ml-5 rounded-full' source={require('../../assets/images/food/chickfilletsandwich.jpg')}></Image>
 					<View className='flex flex-col'>
-						<Text className='ml-5'>THIS IS THE POST</Text>
-						<Text className='ml-5 flex flex-col'>THIS IS THE POST</Text>
+						<Text className='ml-5 font-bold'>Food Everyday 🍔🍴</Text>
+						<Text className='ml-5 flex flex-col'>via Somebody</Text>
 					</View>
 					<View className="flex-1 items-end justify-center mr-10">
 						<Text className="text-2xl">⋯</Text>
 					</View>
 				</View>
-				<View className="w-full h-[400px] flex items-center justify-center mt-4">
+				<View className="w-full h-[400px] flex items-center justify-center mt-3">
 					<Image
 						source={require('../../assets/images/food/chickfilletsandwich.jpg')}
 						className="w-full h-full"
@@ -61,16 +62,26 @@ export default function Post() {
 						</Text>
 					</View>
 					<View className='mt-1'>
-						<Text className='ml-5'>View all 12 comments</Text>
+						<Text className='ml-5 text-sm color-gray-500'>View all 12 comments</Text>
 					</View>
 					<View className='mt-1 ml-5 '>
 						<Text className=''>
 							<Text className="font-bold">Jonh</Text> 👌
 						</Text>
 					</View>
-										<View className='mt-1 ml-5 '>
+					<View className='mt-1 ml-5 '>
 						<Text className=''>
 							<Text className="font-bold">Jane</Text> 🔥🔥🔥🔥
+						</Text>
+					</View>
+					<View className='mt-1 ml-5 '>
+						<Text className=''>
+							<Text className="font-bold">somebody.else</Text> This is amazing, nothing compares
+						</Text>
+					</View>
+						<View className='mt-1 ml-5 '>
+						<Text className=''>
+							<Text className="text-sm color-gray-500">1 day ago</Text>
 						</Text>
 					</View>
 

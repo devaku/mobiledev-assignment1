@@ -10,9 +10,9 @@ export default function TabLayout() {
 	 * I added this here because the tab drawer
 	 * is too high in android. lol
 	 */
-	const customTabBarStyle = { height: 0 };
+	const customTabBarStyle = { height: 0, borderTopWidth: 2 };
 	if (Platform.OS === 'ios') {
-		// do something for ios
+		customTabBarStyle.height = 50;
 	} else if (Platform.OS === 'android') {
 		customTabBarStyle.height = 10;
 	} else if (Platform.OS === 'web') {

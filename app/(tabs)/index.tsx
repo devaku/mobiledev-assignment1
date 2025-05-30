@@ -90,7 +90,7 @@ export default function App() {
 
 				{/* Text */}
 				<View className="ml-5 mt-4">
-					<Text>Food Everyday 🍔🍴</Text>
+					<Text className="font-bold">Food Everyday 🍔🍴</Text>
 					<Text>Mouth watering goodness!</Text>
 				</View>
 
